@@ -1,9 +1,4 @@
-/* 23. Fix issues for dark theme */
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
-
-/* ========================================================================== */
-/* Normalize */
-/* ========================================================================== */
 
 html {
   line-height: 1.15;
@@ -12,6 +7,10 @@ html {
 
 body {
   margin: 0;
+}
+
+main {
+  display: block;
 }
 
 hr {
@@ -31,7 +30,6 @@ a {
 
 abbr[title] {
   border-bottom: none;
-  text-decoration: underline;
   text-decoration: underline dotted;
 }
 
@@ -55,9 +53,9 @@ img {
   border-style: none;
 }
 
-/* ========================================================================== */
-/* Universal box sizing */
-/* ========================================================================== */
+/* ===============================
+   Universal box sizing
+================================ */
 
 *,
 *::before,
@@ -65,9 +63,9 @@ img {
   box-sizing: border-box;
 }
 
-/* ========================================================================== */
-/* Custom properties */
-/* ========================================================================== */
+/* ===============================
+   Custom properties
+================================ */
 
 :root {
   --color-primary: #d73953;
@@ -78,8 +76,8 @@ img {
 
   --text-color: var(--color-black);
 
-  --font-family-base: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --font-family-title: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-family-base: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-family-title: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
   --font-size-small: 1.2rem;
   --font-size-medium: 1.6rem;
@@ -117,9 +115,9 @@ img {
   --section-tagline-margin: 0;
 }
 
-/* ========================================================================== */
-/* Base styles */
-/* ========================================================================== */
+/* ===============================
+   Base styles
+================================ */
 
 html {
   scroll-behavior: smooth;
@@ -131,7 +129,7 @@ body {
   font-family: var(--font-family-base);
   font-size: var(--font-size-medium);
   font-weight: var(--font-weight-regular);
-  min-height: var(--line-height-base);
+  line-height: var(--line-height-base);
 }
 
 h1,
@@ -145,7 +143,6 @@ h6 {
 }
 
 a:link {
-  color: var(--text-color);
   text-decoration: none;
 }
 
@@ -165,9 +162,13 @@ a:active {
   display: none;
 }
 
-/* ========================================================================== */
-/* Sections */
-/* ========================================================================== */
+.card-category {
+  color: var(--color-primary);
+}
+
+/* ===============================
+   Sections
+================================ */
 
 .section {
   padding: var(--section-padding);
@@ -203,19 +204,9 @@ a:active {
   margin: var(--section-tagline-margin);
 }
 
-/* ========================================================================== */
-/* Dark theme sections */
-/* ========================================================================== */
-
-[data-section-theme="dark"] {
-  --text-color: var(--color-white);
-  --section-title-color: var(--color-white);
-  background-color: var(--color-black);
-}
-
-/* ========================================================================== */
-/* Container */
-/* ========================================================================== */
+/* ===============================
+   Container
+================================ */
 
 .container {
   width: 960px;
@@ -223,9 +214,9 @@ a:active {
   margin-right: auto;
 }
 
-/* ========================================================================== */
-/* Navbar */
-/* ========================================================================== */
+/* ===============================
+   Navbar
+================================ */
 
 .navbar-menu {
   float: right;
@@ -256,9 +247,9 @@ a:active {
   color: var(--nav-item-link-hover);
 }
 
-/* ========================================================================== */
-/* Grid system */
-/* ========================================================================== */
+/* ===============================
+   Grid
+================================ */
 
 ul.row {
   margin: 0;
@@ -285,27 +276,16 @@ ul.row {
   clear: both;
 }
 
-/* ========================================================================== */
-/* Footer */
-/* ========================================================================== */
+/* ===============================
+   Footer
+================================ */
 
 .footer {
   padding: var(--footer-padding);
 }
 
-/* Task 23: footer address color */
-.footer-address {
-  color: var(--text-color);
-}
-
-/* Task 23: social link as block */
-.social-link {
-  display: block;
-}
-
-/* Task 23: svg fill inside social link */
-.social-link svg {
-  fill: var(--text-color);
+.footer ul {
+  text-align: right;
 }
 
 .footer-copyright {
@@ -314,14 +294,24 @@ ul.row {
   color: var(--text-color);
 }
 
-.footer ul {
-  text-align: right;
+.footer-address {
+  color: var(--text-color);
 }
 
-/* ========================================================================== */
-/* Cards */
-/* ========================================================================== */
+.social-link {
+  display: block;
+}
 
-.card-category {
-  color: var(--color-primary);
+.social-link svg {
+  fill: var(--text-color);
+}
+
+/* ===============================
+   Dark theme
+================================ */
+
+[data-section-theme="dark"] {
+  --text-color: var(--color-white);
+  --section-title-color: var(--color-white);
+  background-color: var(--color-black);
 }
