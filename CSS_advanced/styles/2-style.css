@@ -1,0 +1,26 @@
+/* 2. Do you know your color values? */
+
+/* Set default foreground color for the body */
+body {
+  color: #161616;
+}
+
+/* Set foreground color for all anchor elements */
+a {
+  color: #161616;
+}
+
+/* Hide elements visually */
+.visually-hidden {
+  display: none;
+}
+
+/* Set color for card category */
+.card-category {
+  color: #D73953;
+}
+
+/* Set color for section tagline */
+.section-tagline {
+  color: #D73953;
+}
